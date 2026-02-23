@@ -16,7 +16,8 @@
     "clean": "rm -rf dist"
   },
   "dependencies": {
-    "@agent-framework/core": "file:../core"
+    "@agent-framework/core": "file:../core",
+    "@agent-framework/runtime": "file:../runtime"
   },
   "devDependencies": {
     "typescript": "^5.3.0"
