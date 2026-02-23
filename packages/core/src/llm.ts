@@ -1,0 +1,39 @@
+import { z } from "zod";
+
+/**
+ * Unified LLM message for chat.
+ */
+export const LLMMessageSchema = z.object({
+  role: z.enum(["system", "user", "assistant"]),
+  content: z.string(),
+  name: z.string().optional(),
+});
+export type LLMMessage = z.infer<typeof LLMMessageSchema>;
+
+export interface LLMChatOptions {
+  temperature?: number;
+  maxTokens?: number;
+  stop?: string[];
+}
+
+export interface LLMChatResult {
+  message: LLMMessage;
+  usage?: { promptTokens: number; completionTokens: number; totalTokens: number };
+  finishReason?: string;
+}
+
+export interface LLMStreamChunk {
+  delta: string;
+  usage?: LLMChatResult["usage"];
+}
+
+/**
+ * Unified LLM interface: chat, stream, embed, tokenize.
+ * Adapters: OpenAI, Anthropic, Gemini, etc.
+ */
+export interface LLMProvider {
+  chat(messages: LLMMessage[], options?: LLMChatOptions): Promise<LLMChatResult>;
+  stream(messages: LLMMessage[], options?: LLMChatOptions): AsyncIterable<LLMStreamChunk>;
+  embed?(text: string | string[]): Promise<number[][]>;
+  tokenize?(text: string): Promise<number[]>;
+}
