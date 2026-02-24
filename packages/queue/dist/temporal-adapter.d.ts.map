@@ -1,0 +1,1 @@
+{"version":3,"file":"temporal-adapter.d.ts","sourceRoot":"","sources":["../src/temporal-adapter.ts"],"names":[],"mappings":"AAAA;;;GAGG;AACH,MAAM,WAAW,qBAAqB;IACpC,UAAU,EAAE,MAAM,CAAC;IACnB,SAAS,EAAE,MAAM,CAAC;IAClB,IAAI,EAAE,OAAO,EAAE,CAAC;CACjB;AAED,MAAM,WAAW,eAAe;IAC9B,8DAA8D;IAC9D,aAAa,CAAC,CAAC,KAAK,EAAE,qBAAqB,GAAG,OAAO,CAAC,MAAM,CAAC,CAAC;CAC/D"}

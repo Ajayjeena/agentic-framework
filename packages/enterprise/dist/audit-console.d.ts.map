@@ -1,0 +1,1 @@
+{"version":3,"file":"audit-console.d.ts","sourceRoot":"","sources":["../src/audit-console.ts"],"names":[],"mappings":"AAAA,OAAO,KAAK,EAAE,WAAW,EAAE,UAAU,EAAE,MAAM,YAAY,CAAC;AAE1D;;GAEG;AACH,qBAAa,kBAAmB,YAAW,WAAW;IAC9C,GAAG,CAAC,KAAK,EAAE,UAAU,GAAG,OAAO,CAAC,IAAI,CAAC;CAO5C"}

@@ -23,7 +23,8 @@ export class Retriever {
   async retrieve(query: string, topK?: number, filter?: Record<string, unknown>): Promise<SearchResult[] | RerankResult[]> {
     const k = topK ?? this.options.topK ?? 10;
     const embedding = await this.embedFn(query);
-    const results = await this.vectorStore.search(embedding, k * 2, filter);
+    const searchFilter = filter ? { ...filter, _query: query } : { _query: query };
+    const results = await this.vectorStore.search(embedding, k * 2, searchFilter);
 
     if (this.options.reranker) {
       return this.options.reranker.rerank(query, results, k);

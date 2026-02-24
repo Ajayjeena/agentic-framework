@@ -3,6 +3,7 @@ export * from "./connector.js";
 export * from "./connectors/file.js";
 export * from "./vector-store.js";
 export * from "./stores/in-memory.js";
+export * from "./stores/hybrid.js";
 export * from "./chunker.js";
 export * from "./reranker.js";
 export * from "./rerankers/passthrough.js";
