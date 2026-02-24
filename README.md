@@ -1,6 +1,6 @@
-# Enterprise Agent Framework
+# Agent Framework
 
-Enterprise-grade agentic framework with TypeScript and Python from day one, multi-agent support, durable execution, and first-class memory.
+Agentic framework with TypeScript and Python covering the drawbacks that i have faced across various framework which i use, multi-agent support, durable execution, and first-class memory.
 
 ## Packages
 
